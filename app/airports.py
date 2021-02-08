@@ -37,6 +37,6 @@ class Airports(object):
     """
     self.airport_file.seek(0)
     for row in self.airport_reader:
-      if row['iata_code'] == iata_code:
-        return row['name']
+        if row['iata_code'] == iata_code.upper():
+            return row['name']
     return None
